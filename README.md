@@ -6,7 +6,7 @@ Stand Alone Environment
 ------------------------------------
 
 1.  Set up the environment varialbes in `sourcefile`
-
+```
     # MySQL host location
     export MAGEDB_DBHOST=localhost
 
@@ -24,16 +24,16 @@ Stand Alone Environment
 
     # The base URL of the website we are creating
     export MAGE_BASEURL="http://magento-demo.com"
-
+```
 (if you don't want the sample data loaded change the last setting to `no`)
 
 2.  Apply the env variables
 
-    source sourcefile
+    ```source sourcefile```
 
 3.  Install
 
-    ./install.sh
+    ```./install.sh```
 
 This deos a few things:
 
@@ -44,11 +44,11 @@ This deos a few things:
 
 4. Set up a host entry for http://magento-demo.com
 
-    sudo echo "127.0.0.1    magento-demo.com" >> /etc/hosts
+    ```sudo echo "127.0.0.1    magento-demo.com" >> /etc/hosts```
 
 5. Set up a Vhost in Apache / Nginx
 
-    Google it
+    ```Google it```
 
 
 Stand Alone Environment and restore a databse from a different environment
@@ -56,6 +56,7 @@ Stand Alone Environment and restore a databse from a different environment
 
 1.  Set up the environment varialbes in `sourcefile`
 
+```
     # MySQL host location
     export MAGEDB_DBHOST=localhost
 
@@ -98,27 +99,28 @@ Stand Alone Environment and restore a databse from a different environment
 
     # Set 1 if you want to backup the current database before overwriting with this dump
     export BK_DUMP_BEFORE_RESTORE=0
-
+```
 
 2.  Apply the env variables
 
+```
     source sourcefile
-
+```
 3.  Install
 
-    ./install.sh
+    ```./install.sh```
 
 4. Set up a host entry for http://magento-demo.com
 
-    sudo echo "127.0.0.1    magento-demo.com" >> /etc/hosts
+    ```sudo echo "127.0.0.1    magento-demo.com" >> /etc/hosts```
 
 5. Set up a Vhost in Apache / Nginx
 
-    Google it
+    ```Google it```
 
 6. Restore your database over the top
 
-    ./restore-database.sh
+    ```./restore-database.sh```
 
 
 Base Magento Project
@@ -129,6 +131,7 @@ Base Magento Project
 3. Create a new repo and add new remote localtion 
 4. Follow steps in above `Stand Alone Environment` section.
 5. Optionally clone a base Magento / install from a package rather than installing using Mage-run (see notes in install.sh)
+
 ---- Follow whatever branching strategy-----
 
 
